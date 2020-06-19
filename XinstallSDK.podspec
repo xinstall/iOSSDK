@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.license = {"type"=>"MIT", "file"=>"LICENSE"}
   s.authors = {"huawenjie"=>"huahanjie1989@qq.com"}
   s.homepage = "https://www.xinstall.com"
-  s.description = "TODO: Add long description of the pod here."
+  s.description = "XinstallSDK create by xinstall.com"
   s.source = { :path => '.' }
 
   s.ios.deployment_target    = '9.2'
