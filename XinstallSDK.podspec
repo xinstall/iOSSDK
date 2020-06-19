@@ -12,7 +12,8 @@ Pod::Spec.new do |s|
   s.homepage        = "https://www.xinstall.com"
   s.description     = "XinstallSDK create by xinstall.com"
   s.source          = { :git => "https://github.com/xinstall/iOSSDK.git", :tag => s.version.to_s }
-
-  s.vendored_libraries = 'frameworks/libXinstallSDK.a'
+  
   s.source_files = 'Classes/**/*.{h,m}'
+  s.vendored_libraries = 'frameworks/libXinstallSDK.a'
+  
 end
