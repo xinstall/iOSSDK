@@ -9,5 +9,5 @@ Pod::Spec.new do |s|
   s.source = { :path => '.' }
 
   s.ios.deployment_target    = '9.2'
-  s.ios.vendored_framework   = 'ios/XinstallSDK.framework'
+  s.ios.vendored_framework   = 'frameworks/XinstallSDK.framework'
 end
