@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
   s.source = { :path => '.' }
 
   s.ios.deployment_target    = '9.2'
-  s.vendored_libraries = 'frameworks/libXInstallSDK.a'
+  s.vendored_libraries = 'frameworks/libXinstallSDK.a'
   s.source_files = 'Classes/**/*.{h,m}'
 end
