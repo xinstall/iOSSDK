@@ -1,14 +1,14 @@
 //
-//  XInstallSDK.h
-//  XInstallSDK
+//  XinstallSDK.h
+//  XinstallSDK
 //
 //  Created by huawenjie on 2020/5/7.
 //  Copyright © 2020 jiwei. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "XInstallData.h"
-#import "XInstallDefault.h"
+#import "XinstallData.h"
+#import "XinstallDefault.h"
 
 
 @protocol XInstallDelegate <NSObject>
@@ -18,20 +18,20 @@
  * 唤醒时获取h5页面动态参数（如果是渠道链接，渠道编号会一起返回）
  * @param appData 动态参数对象
  */
-- (void)getWakeUpParams:(nullable XInstallData *)appData;
+- (void)getWakeUpParams:(nullable XinstallData *)appData;
 
 /**
  * 安装时获取h5页面动态参数（如果是渠道链接，渠道编号会一起返回）
  * @param appData 动态参数对象
  */
-- (void)getInstallParams:(nullable XInstallData *)appData;
+- (void)getInstallParams:(nullable XinstallData *)appData;
 
 @end
 
-@interface XInstallSDK : NSObject
+@interface XinstallSDK : NSObject
 #pragma mark - properties methods
 /**
- * 获取sdk当前版本号,add in v2.2.1
+ * 获取sdk当前版本号
  */
 + (NSString *_Nullable)sdkVersion;
 
@@ -51,8 +51,8 @@
 /// @name 获取安装的动态参数
 ///----------------------
 
-/// 对象为空则代表非本次安装  参数installRequestSuccess 安装信息网络请求是否成功
-@property (nonatomic, strong) XInstallData * __nullable installData;
+/// 对象为空则代表非本次安装
+@property (nonatomic, strong) XinstallData * __nullable installData;
 
 
 ///---------------------

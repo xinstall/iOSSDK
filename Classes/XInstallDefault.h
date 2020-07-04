@@ -1,6 +1,6 @@
 //
-//  XInstallDefault.h
-//  XInstallDemo
+//  XinstallDefault.h
+//  XinstallDemo
 //
 //  Created by huawenjie on 2020/5/12.
 //  Copyright © 2020 jiwei. All rights reserved.
@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-#ifndef XInstallDefault_h
-#define XInstallDefault_h
+#ifndef XinstallDefault_h
+#define XinstallDefault_h
 
-extern  NSString  * _Nonnull const XInstallAppKey;
-extern NSString * _Nonnull const XInstallBaseServiceURL;
+extern  NSString  * _Nonnull const XinstallAppKey;
+extern NSString * _Nonnull const XinstallBaseServiceURL;
 
-#endif /* XInstallDefault_h */
+#endif /* XinstallDefault_h */
