@@ -62,7 +62,7 @@
 /**
  * 处理 URI schemes
  * @param URL 系统回调传回的URL
- * @return bool URL是否被OpenInstall识别
+ * @return bool URL是否被XInstall识别
  */
 + (BOOL)handLinkURL:(NSURL *_Nullable)URL;
 
