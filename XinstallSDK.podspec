@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name            = "XinstallSDK"
-  s.version         = "0.0.4"
+  s.version         = "0.0.5"
   s.platform        = :ios, '9.0'
   s.summary         = "XinstallSDK is officially supported iOS SDK"
   s.description     = <<-DESC
