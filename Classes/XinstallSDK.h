@@ -1,9 +1,9 @@
-//  0.0.7
+//  1.1.1
 //  XinstallSDK.h
 //  XinstallSDK
 //
-//  Created by huawenjie on 2020/5/7.
-//  Copyright © 2020 jiwei. All rights reserved.
+//  Created by Xinstall on 2020/5/7.
+//  Copyright © 2020 shu bao. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,20 +11,20 @@
 #import "XinstallDefault.h"
 
 
-@protocol XInstallDelegate <NSObject>
+@protocol XinstallDelegate <NSObject>
 @optional
 
 /**
  * 唤醒时获取h5页面动态参数（如果是渠道链接，渠道编号会一起返回）
  * @param appData 动态参数对象
  */
-- (void)getWakeUpParams:(nullable XinstallData *)appData;
+- (void)xinstall_getWakeUpParams:(nullable XinstallData *)appData;
 
 /**
  * 安装时获取h5页面动态参数（如果是渠道链接，渠道编号会一起返回）
  * @param appData 动态参数对象
  */
-- (void)getInstallParams:(nullable XinstallData *)appData;
+- (void)xinstall_getInstallParams:(nullable XinstallData *)appData;
 
 @end
 
@@ -44,7 +44,7 @@
  * 初始化XInstall SDK
  * 调用该方法前，需在Info.plist文件中配置键值对,键为com.xinstall.APP_KEY不能修改，值为相应的应用的appKey，可在xinstall官方后台查看
  */
-+ (void)initWithDelegate:(id<XInstallDelegate> _Nonnull)delegate;
++ (void)initWithDelegate:(id<XinstallDelegate> _Nonnull)delegate;
 
 
 ///----------------------
@@ -53,18 +53,6 @@
 
 /// 对象为空则代表非本次安装
 @property (nonatomic, strong) XinstallData * __nullable installData;
-
-
-///---------------------
-/// @name 一键拉起回调处理
-///---------------------
-
-/**
- * 处理 URI schemes
- * @param URL 系统回调传回的URL
- * @return bool URL是否被XInstall识别
- */
-+ (BOOL)handLinkURL:(NSURL *_Nullable)URL;
 
 /**
  * 处理 通用链接
@@ -97,5 +85,13 @@
  * @param effectValue 效果点值（如果是人民币金额，请以分为计量单位）
  */
 - (void)reportEffectPoint:(NSString *_Nonnull)effectID effectValue:(long)effectValue;
+
+/**
+ * 效果时长统计
+ * @param effectID 效果点ID
+ * @param effectValue 效果点值（如果是某页面或者某行为）
+ * @param duration 时间长度
+ */
+- (void)reportEffectPoint:(NSString *_Nonnull)effectID effectValue:(long)effectValue duration:(NSInteger)duration;
 
 @end
