@@ -1,4 +1,4 @@
-//  1.1.1
+//  1.1.2
 //  XinstallSDK.h
 //  XinstallSDK
 //
@@ -86,12 +86,12 @@
  */
 - (void)reportEffectPoint:(NSString *_Nonnull)effectID effectValue:(long)effectValue;
 
-/**
- * 效果时长统计
- * @param effectID 效果点ID
- * @param effectValue 效果点值（如果是某页面或者某行为）
- * @param duration 时间长度
- */
-- (void)reportEffectPoint:(NSString *_Nonnull)effectID effectValue:(long)effectValue duration:(NSInteger)duration;
+///**
+// * 效果时长统计
+// * @param effectID 效果点ID
+// * @param effectValue 效果点值（如果是某页面或者某行为）
+// * @param duration 时间长度
+// */
+//- (void)reportEffectPoint:(NSString *_Nonnull)effectID effectValue:(long)effectValue duration:(NSInteger)duration;
 
 @end
