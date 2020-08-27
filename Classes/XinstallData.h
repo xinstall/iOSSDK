@@ -1,6 +1,6 @@
 //
 //  XinstallData.h
-//  XInstall
+//  XinstallSDK
 //
 //  Created by Xinstall on 2020/5/7.
 //  Copyright © 2020 shu bao. All rights reserved.

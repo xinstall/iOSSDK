@@ -1,4 +1,4 @@
-//  1.1.3
+//  1.1.4
 //  XinstallSDK.h
 //  XinstallSDK
 //
@@ -17,12 +17,14 @@
 /**
  * 唤醒时获取h5页面动态参数（如果是渠道链接，渠道编号会一起返回）
  * @param appData 动态参数对象
+ * appData 的 uo co 数据如果前端传入不是正常的json 数据，会返回前端传入的String ，如果为正常json 数据 会返回字典或数组
  */
 - (void)xinstall_getWakeUpParams:(nullable XinstallData *)appData;
 
 /**
  * 安装时获取h5页面动态参数（如果是渠道链接，渠道编号会一起返回）
  * @param appData 动态参数对象
+ * appData 的 uo co 数据如果前端传入不是正常的json 数据，会返回前端传入的String ，如果为正常json 数据 会返回字典或数组
  */
 - (void)xinstall_getInstallParams:(nullable XinstallData *)appData;
 
@@ -41,7 +43,7 @@
 + (instancetype _Nullable)defaultManager;
 
 /**
- * 初始化XInstall SDK
+ * 初始化Xinstall SDK
  * 调用该方法前，需在Info.plist文件中配置键值对,键为com.xinstall.APP_KEY不能修改，值为相应的应用的appKey，可在xinstall官方后台查看
  */
 + (void)initWithDelegate:(id<XinstallDelegate> _Nonnull)delegate;
@@ -57,7 +59,7 @@
 /**
  * 处理 通用链接
  * @param userActivity 存储了页面信息，包括url
- * @return bool URL是否被XInstall识别
+ * @return bool URL是否被Xinstall识别
  */
 + (BOOL)continueUserActivity:(NSUserActivity *_Nullable)userActivity;
 
