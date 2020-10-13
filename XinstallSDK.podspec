@@ -13,6 +13,8 @@ Pod::Spec.new do |s|
   s.description     = "XinstallSDK create by xinstall.com"
   s.source          = { :git => "https://github.com/xinstall/iOSSDK.git", :tag => s.version.to_s }
   
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  
   s.source_files = 'Classes/**/*.{h,m}'
   s.vendored_libraries = 'frameworks/libXinstallSDK.a'
   
