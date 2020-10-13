@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "XinstallData.h"
 #import "XinstallDefault.h"
-#import "NSNull+XinSafeNull.h"
+
 
 
 @protocol XinstallDelegate <NSObject>
