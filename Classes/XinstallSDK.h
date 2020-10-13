@@ -1,4 +1,4 @@
-//  1.1.5
+//  1.1.6
 //  XinstallSDK.h
 //  XinstallSDK
 //
@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "XinstallData.h"
 #import "XinstallDefault.h"
+#import "NSNull+XinSafeNull.h"
 
 
 @protocol XinstallDelegate <NSObject>
