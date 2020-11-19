@@ -1,4 +1,4 @@
-//  1.1.6
+//  1.1.7 支持低版本Xcode
 //  XinstallSDK.h
 //  XinstallSDK
 //
