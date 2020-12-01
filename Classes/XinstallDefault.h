@@ -19,6 +19,7 @@ extern NSString * _Nonnull const XinstallVersion;
 #define XINNULLSAFE_ENABLED 1
 #endif
 
+//
 #ifdef DEBUG
 #define XINLog(...) NSLog(__VA_ARGS__)
 #define XINDebugMethod() NSLog(@"%s", __func__)
