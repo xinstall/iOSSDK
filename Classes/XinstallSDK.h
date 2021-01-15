@@ -77,20 +77,20 @@
 
 
 /**
- * 渠道效果统计
+ * 渠道事件统计
  *
  * 目前SDK采用定时上报策略，时间间隔由服务器控制
  * e.g.可统计用户支付消费情况,点击次数等
  *
- * @param effectID 效果点ID
- * @param effectValue 效果点值（如果是人民币金额，请以分为计量单位）
+ * @param effectID 事件点ID
+ * @param effectValue 事件点值（如果是人民币金额，请以分为计量单位）
  */
 - (void)reportEffectPoint:(NSString *_Nonnull)effectID effectValue:(long)effectValue;
 
 ///**
-// * 效果时长统计
-// * @param effectID 效果点ID
-// * @param effectValue 效果点值（如果是某页面或者某行为）
+// * 事件时长统计
+// * @param effectID 事件点
+// * @param effectValue 事件点值（如果是某页面或者某行为）
 // * @param duration 时间长度
 // */
 //- (void)reportEffectPoint:(NSString *_Nonnull)effectID effectValue:(long)effectValue duration:(NSInteger)duration;
