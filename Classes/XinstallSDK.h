@@ -14,16 +14,16 @@
 @optional
 
 /**
- * 唤醒时获取h5页面动态参数（如果是渠道链接，渠道编号会一起返回）
+ * 一键拉起时获取 H5页面 携带的动态参数，参数中如果携带渠道，也会在方法中一起返回渠道号
  * @param appData 动态参数对象
- * appData 的 uo co 数据如果前端传入不是正常的json 数据，会返回前端传入的String ，如果为正常json 数据 会返回字典或数组
+ * appData 的 uo co 数据如果前端传入不是正常的json 数据，会返回前端传入的 String ，如果为正常 JSON 数据 会返回字典或数组
  */
 - (void)xinstall_getWakeUpParams:(nullable XinstallData *)appData;
 
 /**
- * 安装时获取h5页面动态参数（如果是渠道链接，渠道编号会一起返回）
+ * 安装时获取 H5页面 携带的动态参数，参数中如果携带渠道，也会在方法中一起返回渠道号
  * @param appData 动态参数对象
- * appData 的 uo co 数据如果前端传入不是正常的json 数据，会返回前端传入的String ，如果为正常json 数据 会返回字典或数组
+ * appData 的 uo co 数据如果前端传入不是正常的json 数据，会返回前端传入的 String ，如果为正常 JSON 数据 会返回字典或数组
  */
 - (void)xinstall_getInstallParams:(nullable XinstallData *)appData;
 
@@ -31,66 +31,56 @@
 
 @interface XinstallSDK : NSObject
 #pragma mark - properties methods
+
 /**
- * 获取sdk当前版本号
+ * 获取 Xinstall SDK 当前版本
  */
 + (NSString *_Nullable)sdkVersion;
 
-/**
- * SDK单例,returns a previously instantiated singleton instance of the API.
- */
 + (instancetype _Nullable)defaultManager;
 
 /**
- * 初始化Xinstall SDK
- * 调用该方法前，需在Info.plist文件中配置键值对,键为com.xinstall.APP_KEY不能修改，值为相应的应用的appKey，可在xinstall官方后台查看
+ * 【重要】初始化 Xinstall SDK
+ * 该方法只需要调用一次，调用实际尽量提前，一般在 App 启动时调用该方法进行初始化
+ * 调用该方法前，需在 Info.plist 文件中配置键值对，键为固定值 com.xinstall.APP_KEY ，值为 Xinstall 后台对应应用的 appKey，可在 Xinstall 官方后台获取
+ *
+ * @param delegate 实现 XinstallDelegate 的对象
  */
 + (void)initWithDelegate:(id<XinstallDelegate> _Nonnull)delegate;
-
-
-///----------------------
-/// @name 获取安装的动态参数
-///----------------------
 
 /// 对象为空则代表非本次安装
 @property (nonatomic, strong) XinstallData * __nullable installData;
 
 /**
  * 处理 通用链接
- * @param userActivity 存储了页面信息，包括url
- * @return bool URL是否被Xinstall识别
+ * @param userActivity 由 AppDelegate 和 SceneDelegate 内对应方法中传入
+ * @return 本次唤起是否被 Xinstall 正常处理
  */
 + (BOOL)continueUserActivity:(NSUserActivity *_Nullable)userActivity;
 
-///--------------
-/// @name 统计相关
-///--------------
-
-
 /**
- * 注册量统计
+ * 上报一次注册量
  *
- * 使用xinstall 控制中心提供的渠道统计时，在App用户注册完成后调用，可以统计渠道注册量。
- * 必须在注册成功的时再调用该方法，避免重复调用，否则可能导致注册统计不准
+ * 调用该方法后，会上报对应渠道的一次注册量，可以在 Xinstall 管理后台对应 App 的渠道报表中看到累计注册量等数据
+ * 一般该方法会在 App 业务注册后进行调用，在实际使用场景中请注意不要重复调用，以免注册量上报次数过多
  */
 + (void)reportRegister;
 
-
 /**
- * 渠道事件统计
+ * 上报一次事件（必须预先在 Xinstall 后台对应 App 内创建好事件ID，才能正确统计进去）
  *
- * 目前SDK采用定时上报策略，时间间隔由服务器控制
- * e.g.可统计用户支付消费情况,点击次数等
+ * 调用该方法后，会上报一次对应事件。上报机制非实时，会存在一定的延时。
  *
- * @param effectID 事件点ID
- * @param effectValue 事件点值（如果是人民币金额，请以分为计量单位）
+ * @param effectID 事件ID（在 Xinstall 后台预先创建）
+ * @param effectValue 事件值（精确到整数）
  */
 - (void)reportEffectPoint:(NSString *_Nonnull)effectID effectValue:(long)effectValue;
 
 ///**
 // * 事件时长统计
-// * @param effectID 事件点
-// * @param effectValue 事件点值（如果是某页面或者某行为）
+//*调用该方法后，会上报一次对应事件。上报机制非实时，会存在一定的延时。
+//* @param effectID 事件ID（在 Xinstall 后台预先创建）
+//* @param effectValue 事件值（精确到整数）
 // * @param duration 时间长度
 // */
 //- (void)reportEffectPoint:(NSString *_Nonnull)effectID effectValue:(long)effectValue duration:(NSInteger)duration;
