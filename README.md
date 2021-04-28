@@ -427,7 +427,7 @@ XinstallSDK.reportRegister()
 XinstallSDK.defaultManager()?.reportEventPoint(@"事件ID", eventValue: 123)
 ```
 
-**注：**只有后台创建事件统计，并且代码中传递的事件ID与后台创建的ID一致时，上报数据才会被统计.
+注：只有后台创建事件统计，并且代码中传递的事件ID与后台创建的ID一致时，上报数据才会被统计.
 
 ## 四、导出ipa包并上传
 
