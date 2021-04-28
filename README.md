@@ -385,7 +385,7 @@ XinstallSDK.defaultManager()?.getInstallParams(completion: { (installData: Xinst
 })
 ```
 
-**【注意】若 installData 不为空，但 installData.channelCode 为空时，代表本次安装不来自于渠道 **
+**【注意】若 installData 不为空，但 installData.channelCode 为空时，代表本次安装不来自于渠道**
 
 ### 4. 高级数据统计
 
