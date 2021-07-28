@@ -1,5 +1,7 @@
 # iOS SDK 集成指南
 
+> 如需使用 Xinstall 的广告平台渠道功能，请按照本文档集成完毕后，继续阅读[《广告平台渠道 iOS 集成指南》](https://doc.xinstall.com/AD/iOSGuide.html)文档，完成额外的集成工作后，才能正常使用广告平台渠道功能。
+
 ## 一、导入 SDK
 
 ### 1. CocoaPods导入
