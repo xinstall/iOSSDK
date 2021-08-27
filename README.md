@@ -389,6 +389,12 @@ XinstallSDK.defaultManager()?.getInstallParams(completion: { (installData: Xinst
 
 **【注意】若 installData 不为空，但 installData.channelCode 为空时，代表本次安装不来自于渠道**
 
+> 您可以在 Xinstall 管理后台对应的 App 内，看到所有的传递参数以及参数出现的次数，方便你们做运营统计分析，如通过该报表知道哪些页面或代理带来了最多客户，客户最感兴趣的 App 页面是什么等。具体参数名和值，运营人员可以和技术协商定义，或联系 Xinstall 客服咨询。具体效果如下图：
+>
+> ![传参报表](https://cdn.xinstall.com/iOS_SDK%E7%B4%A0%E6%9D%90/paramsTable.png)
+
+
+
 ### 4. 高级数据统计
 
 SDK初始化时会自动完成访问量、点击量、安装量、活跃量、留存率等统计工作。 除此之外我们还提供了一下两种数据统计服务：
