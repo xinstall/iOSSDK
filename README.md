@@ -478,7 +478,7 @@ XinstallSDK.defaultManager()?.reportEventPoint(@"事件ID", eventValue: 123)
 XinstallSDK.defaultManager()?.reportShare(byXinShareId: "填写分享人或UID")
 ```
 
-> **注：**分享人或UID 可由您自行定义，只需要用以区分用户即可
+> 注：分享人或UID 可由您自行定义，只需要用以区分用户即可
 
 您可在 Xinstall 管理后台 对应 App 中查看详细分享数据报表，表中的「分享人/UID」即为调用方法时携带的参数，其余字段含义可将鼠标移到字段右边的小问号上进行查看：
 
