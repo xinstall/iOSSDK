@@ -32,7 +32,7 @@ rm ~/Library/Caches/CocoaPods/search_ index.json
 #import "XinstallSDK.h"
 ```
 
-> 点击[这里](https://doc.likeinstall.com/QA/iOSWrong.html#5、使用swift开发时如何桥接sdk)，查看如何在 Swift 开发时进行桥接
+> 点击[这里](https://doc.xinstall.com/QA/iOSWrong.html#5、使用swift开发时如何桥接sdk)，查看如何在 Swift 开发时进行桥接
 
 增加遵守的协议：
 
@@ -482,7 +482,7 @@ XinstallSDK.defaultManager()?.reportShare(byXinShareId: "填写分享人或UID")
 
 您可在 Xinstall 管理后台 对应 App 中查看详细分享数据报表，表中的「分享人/UID」即为调用方法时携带的参数，其余字段含义可将鼠标移到字段右边的小问号上进行查看：
 
-![](https://doc.likeinstall.com/integrationGuide/share.jpg)
+![](https://doc.xinstall.com/integrationGuide/share.jpg)
 
 
 
@@ -490,4 +490,4 @@ XinstallSDK.defaultManager()?.reportShare(byXinShareId: "填写分享人或UID")
 
 **上传 ipa 包时**，我们会帮您做 SDK 集成配置判断，如果符合标准，则可以点击上传，如果存在相关警告，则需要您注意相关设置。
 
-![](https://doc.likeinstall.com/integrationGuide/iOS4.jpg)
+![](https://doc.xinstall.com/integrationGuide/iOS4.jpg)
