@@ -1,4 +1,4 @@
-//  1.5.5
+//  1.5.6
 //  XinstallSDK.h
 //  XinstallSDK
 //
