@@ -460,6 +460,29 @@ XinstallSDK.defaultManager()?.reportEventPoint(@"事件ID", eventValue: 123)
 
 ![](https://cdn.xinstall.com/iOS_SDK%E7%B4%A0%E6%9D%90/eventTable.jpg)
 
+#### 事件明细统计
+
+> 除了旧有事件业务，我们还开发了事件明细统计，用来统计各个事件具体发生情况
+
+在使用之前要现在后台管理系统中打开该事件明细统计功能，具体如下：
+
+![](https://cdn.xinstall.com/iOS_SDK%E7%B4%A0%E6%9D%90/event.png)
+
+在开启权限之后，我们直接使用Xinstall SDK 的`- (void)reportEventWhenOpenDetailInfoWithEventPoint:(NSString *)eventID eventValue:(long)eventValue subValue:(NSString *)subValue`方法上传单个事件的第二个详细值
+
+```objc
+// Objective-c
+[[XinstallSDK defaultManager] reportEventWhenOpenDetailInfoWithEventPoint:@"事件ID" eventValue:123 subValue:@"事件详情值（如用户名）"];
+```
+
+```swift
+XinstallSDK.defaultManager()?.reportEventWhenOpenDetailInfo(withEventPoint: "事件ID", eventValue: 123, subValue: "事件详情值（如用户名）")
+```
+
+最终在事件列表中可以点击查看查阅具体详情的内容
+
+![](https://cdn.xinstall.com/iOS_SDK%E7%B4%A0%E6%9D%90/event_detail_list.png)
+
 ### 5. 场景定制统计
 
 #### 5.1 分享统计
