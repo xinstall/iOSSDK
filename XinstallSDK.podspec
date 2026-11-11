@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name            = "XinstallSDK"
-  s.version         = "1.7.8"
+  s.version         = "1.7.9"
   s.platform        = :ios, '12.0'
   s.summary         = "XinstallSDK is officially supported iOS SDK"
   s.description     = <<-DESC
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   DESC
 
   s.license         = 'MIT'
-  s.authors         = {"hi"=>"hi@xinstall.com"}
+  s.authors         = {"developer"=>"developer@xinstall.net"}
   s.homepage        = "https://www.xinstall.com"
   s.description     = "XinstallSDK create by xinstall.com"
   s.source          = { :git => "https://github.com/xinstall/iOSSDK.git", :tag => s.version.to_s }
