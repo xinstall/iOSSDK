@@ -10,7 +10,6 @@ Pod::Spec.new do |s|
   s.license         = 'MIT'
   s.authors         = {"developer"=>"developer@xinstall.net"}
   s.homepage        = "https://www.xinstall.com"
-  s.description     = "XinstallSDK create by xinstall.com"
   s.source          = { :git => "https://github.com/xinstall/iOSSDK.git", :tag => s.version.to_s }
 
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
